@@ -712,7 +712,7 @@ def fetchGEE() {
       git --version
       git status
       git describe
-      git describe --first-parent
+      // git describe --first-parent
       // git describe --tags --match '[0-9]*\\.[0-9]*\\.[0-9]*\\-*' --first-parent
       ./earth_enterprise/src/scons/getversion.py -l
       ./earth_enterprise/src/scons/getversion.py -l > build_tag.txt
