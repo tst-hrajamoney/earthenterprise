@@ -577,7 +577,7 @@ def setEnv() {
   env.BUILD_TYPE = "$BRANCH_NAME"
   env.MRSIDTGZ = "MrSID_DSDK-9.5.4.4703.tar.gz"
   env.DO_BUILD = 'true'
-  env.OPENGEE_REPO = 'google/earthenterprise'
+  env.OPENGEE_REPO = 'tst-hrajamoney/earthenterprise'
   env.OPENGEE_REF = "${GIT_BRANCH}"
   env.OPENGEE_REF_CHECKOUT = "${GIT_BRANCH}"
   env.OPENGEE_LABEL = 'anon'
@@ -692,7 +692,7 @@ def fetchGEE() {
   dir('earthenterprise') {
     echo 'Pulling open code'
     sh """
-      git clone -b ${OPENGEE_REF_CHECKOUT} https://github.com/google/earthenterprise.git
+      git clone -b ${OPENGEE_REF_CHECKOUT} https://github.com/tst-hrajamoney/earthenterprise.git
       mv earthenterprise/* .
       mv earthenterprise/.git* .
       mv earthenterprise/.travis* .
