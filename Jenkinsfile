@@ -807,7 +807,7 @@ def prepInstance(def instanceIP, def stashName) {
 
   if ( env.DO_TEST.toBoolean() && env.WITH_MRSID.toBoolean() ) {
     echo 'Download MrSID'
-    sh 'wget http://nexus.t-sciences.local:8081/nexus/service/local/repositories/thirdparty/content/com/lizardtech/MrSID_DSDK/9.5.4.4703/${MRSIDTGZ} -O /tmp/${MRSIDTGZ}'
+    sh 'wget http://nexus3.corp.t-sciences.com/repository/thirdparty/com/lizardtech/MrSID_DSDK/9.5.4.4703/${MRSIDTGZ} -O /tmp/${MRSIDTGZ}'
 
     sshagent (credentials: ['jenkins2-centos']) {
       script {
